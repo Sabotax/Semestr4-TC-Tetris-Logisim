@@ -69,12 +69,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(270,490)" to="(320,490)"/>
     <wire from="(440,220)" to="(440,230)"/>
     <wire from="(550,260)" to="(610,260)"/>
-    <wire from="(230,250)" to="(230,390)"/>
     <wire from="(230,440)" to="(410,440)"/>
     <wire from="(590,420)" to="(630,420)"/>
     <wire from="(590,340)" to="(630,340)"/>
     <wire from="(440,240)" to="(440,260)"/>
     <wire from="(390,470)" to="(390,490)"/>
+    <wire from="(220,250)" to="(220,330)"/>
     <wire from="(720,360)" to="(820,360)"/>
     <wire from="(760,450)" to="(760,530)"/>
     <wire from="(620,360)" to="(620,380)"/>
@@ -98,13 +98,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(410,390)" to="(560,390)"/>
     <wire from="(450,470)" to="(450,510)"/>
     <wire from="(200,470)" to="(220,470)"/>
+    <wire from="(220,250)" to="(240,250)"/>
     <wire from="(680,450)" to="(750,450)"/>
     <wire from="(820,360)" to="(820,420)"/>
     <wire from="(230,390)" to="(230,440)"/>
     <wire from="(260,480)" to="(270,480)"/>
     <wire from="(310,450)" to="(320,450)"/>
     <wire from="(410,390)" to="(410,440)"/>
-    <wire from="(230,250)" to="(240,250)"/>
     <wire from="(590,370)" to="(720,370)"/>
     <wire from="(450,470)" to="(580,470)"/>
     <wire from="(820,420)" to="(830,420)"/>
@@ -112,6 +112,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(680,400)" to="(690,400)"/>
     <wire from="(620,380)" to="(630,380)"/>
     <wire from="(190,410)" to="(190,470)"/>
+    <wire from="(230,330)" to="(230,390)"/>
     <wire from="(750,340)" to="(750,350)"/>
     <wire from="(830,350)" to="(830,420)"/>
     <wire from="(270,480)" to="(270,490)"/>
@@ -150,11 +151,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(620,360)" to="(690,360)"/>
     <wire from="(140,510)" to="(150,510)"/>
     <wire from="(580,470)" to="(580,530)"/>
+    <wire from="(220,330)" to="(230,330)"/>
     <wire from="(310,400)" to="(310,450)"/>
     <wire from="(590,420)" to="(590,470)"/>
     <wire from="(760,450)" to="(770,450)"/>
     <wire from="(580,470)" to="(590,470)"/>
+    <comp lib="0" loc="(140,510)" name="Clock"/>
     <comp lib="1" loc="(550,260)" name="AND Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="1" loc="(680,400)" name="AND Gate">
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="4" loc="(210,390)" name="Counter">
@@ -162,54 +168,50 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="max" val="0x7f"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="4" loc="(670,320)" name="D Flip-Flop"/>
-    <comp lib="4" loc="(170,460)" name="Counter">
-      <a name="width" val="2"/>
-      <a name="max" val="0x3"/>
-      <a name="trigger" val="falling"/>
+    <comp lib="1" loc="(680,450)" name="AND Gate">
+      <a name="inputs" val="2"/>
     </comp>
+    <comp lib="1" loc="(490,240)" name="OR Gate">
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(490,280)" name="Constant"/>
+    <comp lib="4" loc="(380,250)" name="ROM">
+      <a name="addrWidth" val="7"/>
+      <a name="dataWidth" val="2"/>
+      <a name="contents">addr/data: 7 2
+0
+</a>
+    </comp>
+    <comp lib="0" loc="(400,250)" name="Splitter"/>
     <comp lib="4" loc="(810,450)" name="T Flip-Flop">
       <a name="trigger" val="falling"/>
     </comp>
+    <comp lib="3" loc="(260,480)" name="Comparator">
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="4" loc="(670,320)" name="D Flip-Flop"/>
     <comp lib="5" loc="(800,190)" name="DotMatrix">
       <a name="inputtype" val="row"/>
       <a name="matrixcols" val="8"/>
       <a name="matrixrows" val="16"/>
       <a name="dotshape" val="circle"/>
     </comp>
-    <comp lib="1" loc="(370,470)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="7" loc="(740,240)" name="GPU"/>
-    <comp lib="1" loc="(680,450)" name="AND Gate">
-      <a name="inputs" val="2"/>
-    </comp>
     <comp lib="0" loc="(220,490)" name="Constant">
       <a name="width" val="2"/>
       <a name="value" val="0x2"/>
     </comp>
-    <comp lib="3" loc="(260,480)" name="Comparator">
+    <comp lib="7" loc="(740,240)" name="GPU"/>
+    <comp lib="4" loc="(170,460)" name="Counter">
       <a name="width" val="2"/>
+      <a name="max" val="0x3"/>
+      <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="0" loc="(400,250)" name="Splitter"/>
-    <comp lib="4" loc="(380,250)" name="ROM">
-      <a name="addrWidth" val="7"/>
-      <a name="dataWidth" val="2"/>
-      <a name="contents">addr/data: 7 2
-1 126*0 1
-</a>
-    </comp>
-    <comp lib="1" loc="(680,400)" name="AND Gate">
+    <comp lib="1" loc="(370,470)" name="AND Gate">
       <a name="inputs" val="2"/>
     </comp>
     <comp lib="1" loc="(730,370)" name="OR Gate">
       <a name="facing" val="north"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="1" loc="(490,240)" name="OR Gate">
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(140,510)" name="Clock"/>
-    <comp lib="0" loc="(490,280)" name="Constant"/>
   </circuit>
 </project>
