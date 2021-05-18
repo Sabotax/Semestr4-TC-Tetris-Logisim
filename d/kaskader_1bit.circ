@@ -79,10 +79,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(320,480)" to="(360,480)"/>
     <wire from="(110,440)" to="(370,440)"/>
     <wire from="(210,500)" to="(210,560)"/>
-    <comp lib="0" loc="(150,560)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
     <comp lib="0" loc="(470,440)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -90,20 +86,24 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="WYJSCIE"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(230,480)" name="Counter">
-      <a name="width" val="3"/>
-      <a name="max" val="0x7"/>
-    </comp>
     <comp lib="0" loc="(260,600)" name="Pin">
       <a name="width" val="3"/>
       <a name="tristate" val="false"/>
       <a name="label" val="KTORY W KOLEJNOSCI"/>
     </comp>
+    <comp lib="4" loc="(400,440)" name="Register">
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="0" loc="(150,560)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
     <comp lib="3" loc="(320,480)" name="Comparator">
       <a name="width" val="3"/>
     </comp>
-    <comp lib="4" loc="(400,440)" name="Register">
-      <a name="width" val="2"/>
+    <comp lib="4" loc="(230,480)" name="Counter">
+      <a name="width" val="3"/>
+      <a name="max" val="0x7"/>
     </comp>
     <comp lib="0" loc="(110,440)" name="Pin">
       <a name="width" val="2"/>
