@@ -65,6 +65,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(880,420)" to="(1000,420)"/>
     <wire from="(240,400)" to="(240,670)"/>
     <wire from="(360,520)" to="(360,540)"/>
+    <wire from="(540,450)" to="(540,540)"/>
     <wire from="(1490,960)" to="(1550,960)"/>
     <wire from="(290,570)" to="(290,600)"/>
     <wire from="(90,450)" to="(190,450)"/>
@@ -153,11 +154,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(190,450)" to="(340,450)"/>
     <wire from="(190,410)" to="(190,450)"/>
     <wire from="(480,370)" to="(500,370)"/>
+    <wire from="(1600,820)" to="(1610,820)"/>
     <wire from="(170,380)" to="(190,380)"/>
     <wire from="(1600,900)" to="(1610,900)"/>
     <wire from="(1600,860)" to="(1610,860)"/>
     <wire from="(1600,940)" to="(1610,940)"/>
-    <wire from="(1600,820)" to="(1610,820)"/>
     <wire from="(360,540)" to="(370,540)"/>
     <wire from="(340,220)" to="(420,220)"/>
     <wire from="(1490,940)" to="(1510,940)"/>
@@ -166,7 +167,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(660,450)" to="(800,450)"/>
     <wire from="(810,390)" to="(810,440)"/>
     <wire from="(1210,920)" to="(1450,920)"/>
-    <wire from="(540,450)" to="(540,460)"/>
     <wire from="(1550,940)" to="(1550,960)"/>
     <wire from="(910,340)" to="(910,350)"/>
     <wire from="(400,150)" to="(450,150)"/>
@@ -204,39 +204,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(340,450)" to="(540,450)"/>
     <wire from="(1250,710)" to="(1270,710)"/>
     <wire from="(650,280)" to="(660,280)"/>
-    <comp lib="0" loc="(280,390)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(840,460)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
     <comp lib="4" loc="(1410,710)" name="RAM">
       <a name="addrWidth" val="7"/>
       <a name="dataWidth" val="2"/>
       <a name="bus" val="separate"/>
     </comp>
-    <comp lib="0" loc="(170,320)" name="Constant"/>
-    <comp lib="2" loc="(330,400)" name="Multiplexer">
+    <comp lib="2" loc="(480,160)" name="Multiplexer">
       <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(500,350)" name="Constant">
-      <a name="width" val="2"/>
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="3" loc="(390,340)" name="Adder">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="8" loc="(1560,840)" name="GPU"/>
-    <comp lib="1" loc="(190,390)" name="Controlled Buffer">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(750,400)" name="Splitter">
-      <a name="appear" val="center"/>
-    </comp>
-    <comp lib="0" loc="(930,320)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x0"/>
     </comp>
     <comp lib="7" loc="(1460,970)" name="GPU manager"/>
     <comp lib="1" loc="(310,480)" name="AND Gate">
@@ -244,91 +218,59 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(280,410)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x8"/>
+    <comp lib="5" loc="(1610,790)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="8"/>
+      <a name="matrixrows" val="16"/>
     </comp>
-    <comp lib="1" loc="(810,390)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(850,320)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x8"/>
-    </comp>
-    <comp lib="1" loc="(1030,410)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="4" loc="(390,590)" name="D Flip-Flop"/>
-    <comp lib="9" loc="(290,170)" name="2x2 Block"/>
-    <comp lib="3" loc="(980,330)" name="Comparator">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(540,460)" name="Clock">
-      <a name="facing" val="north"/>
+    <comp lib="0" loc="(170,380)" name="Pull Resistor">
+      <a name="facing" val="east"/>
     </comp>
     <comp lib="1" loc="(350,610)" name="XOR Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
       <a name="negate1" val="true"/>
     </comp>
-    <comp lib="2" loc="(480,160)" name="Multiplexer">
+    <comp lib="0" loc="(280,390)" name="Constant">
       <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
     </comp>
-    <comp lib="3" loc="(540,360)" name="Comparator">
-      <a name="width" val="2"/>
-    </comp>
-    <comp lib="2" loc="(1470,780)" name="Multiplexer">
-      <a name="width" val="2"/>
-    </comp>
-    <comp lib="0" loc="(370,540)" name="Pull Resistor">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="2" loc="(1210,770)" name="Demultiplexer">
+    <comp lib="3" loc="(390,340)" name="Adder">
       <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(290,620)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="5" loc="(1610,790)" name="DotMatrix">
-      <a name="inputtype" val="row"/>
-      <a name="matrixcols" val="8"/>
-      <a name="matrixrows" val="16"/>
-    </comp>
-    <comp lib="4" loc="(720,170)" name="RAM">
-      <a name="addrWidth" val="7"/>
-      <a name="dataWidth" val="2"/>
-      <a name="bus" val="separate"/>
-    </comp>
-    <comp lib="2" loc="(450,210)" name="Multiplexer">
-      <a name="width" val="2"/>
-    </comp>
-    <comp lib="4" loc="(1410,840)" name="RAM">
-      <a name="addrWidth" val="7"/>
-      <a name="dataWidth" val="2"/>
-      <a name="bus" val="separate"/>
     </comp>
     <comp lib="1" loc="(820,450)" name="Controlled Buffer">
       <a name="control" val="left"/>
     </comp>
-    <comp lib="0" loc="(630,210)" name="Constant">
+    <comp lib="0" loc="(840,460)" name="Pull Resistor">
       <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(500,350)" name="Constant">
+      <a name="width" val="2"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="2" loc="(1470,780)" name="Multiplexer">
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="1" loc="(1030,410)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
     </comp>
     <comp lib="0" loc="(90,170)" name="Pin">
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(170,380)" name="Pull Resistor">
-      <a name="facing" val="east"/>
+    <comp lib="0" loc="(370,540)" name="Pull Resistor">
+      <a name="facing" val="west"/>
     </comp>
-    <comp lib="4" loc="(880,410)" name="Counter">
-      <a name="width" val="3"/>
-      <a name="max" val="0x7"/>
+    <comp lib="2" loc="(330,400)" name="Multiplexer">
+      <a name="width" val="7"/>
     </comp>
-    <comp lib="0" loc="(290,530)" name="Pin">
-      <a name="tristate" val="false"/>
+    <comp lib="1" loc="(190,390)" name="Controlled Buffer">
+      <a name="facing" val="north"/>
     </comp>
-    <comp lib="3" loc="(900,310)" name="Divider">
+    <comp lib="2" loc="(450,210)" name="Multiplexer">
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="3" loc="(980,330)" name="Comparator">
       <a name="width" val="7"/>
     </comp>
     <comp lib="0" loc="(740,170)" name="Pin">
@@ -337,9 +279,67 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="2"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="8" loc="(1560,840)" name="GPU"/>
+    <comp lib="4" loc="(720,170)" name="RAM">
+      <a name="addrWidth" val="7"/>
+      <a name="dataWidth" val="2"/>
+      <a name="bus" val="separate"/>
+    </comp>
+    <comp lib="0" loc="(930,320)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="2" loc="(1210,770)" name="Demultiplexer">
+      <a name="width" val="7"/>
+    </comp>
     <comp lib="4" loc="(210,330)" name="Counter">
       <a name="width" val="7"/>
       <a name="max" val="0x7f"/>
+    </comp>
+    <comp lib="0" loc="(540,540)" name="Clock">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(630,210)" name="Constant">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="9" loc="(290,170)" name="2x2 Block"/>
+    <comp lib="1" loc="(810,390)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(1410,840)" name="RAM">
+      <a name="addrWidth" val="7"/>
+      <a name="dataWidth" val="2"/>
+      <a name="bus" val="separate"/>
+    </comp>
+    <comp lib="4" loc="(880,410)" name="Counter">
+      <a name="width" val="3"/>
+      <a name="max" val="0x7"/>
+    </comp>
+    <comp lib="3" loc="(540,360)" name="Comparator">
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="3" loc="(900,310)" name="Divider">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="4" loc="(390,590)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(750,400)" name="Splitter">
+      <a name="appear" val="center"/>
+    </comp>
+    <comp lib="0" loc="(280,410)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x8"/>
+    </comp>
+    <comp lib="0" loc="(850,320)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x8"/>
+    </comp>
+    <comp lib="0" loc="(170,320)" name="Constant"/>
+    <comp lib="0" loc="(290,620)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(290,530)" name="Pin">
+      <a name="tristate" val="false"/>
     </comp>
   </circuit>
 </project>
