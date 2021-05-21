@@ -1,0 +1,3 @@
+01 - pełny,zamrożony
+10 - ruchomy
+00 - pusty
