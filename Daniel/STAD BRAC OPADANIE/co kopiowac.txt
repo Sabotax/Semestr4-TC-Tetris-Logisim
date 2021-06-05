@@ -1,0 +1,3 @@
+folder normal, folder podloga 4 oraz opadanie.circ kopiowac
+
+test_generacja3 jest na prezentacje na lekcji i do sprawdzania
