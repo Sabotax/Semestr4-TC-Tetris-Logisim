@@ -110,25 +110,36 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(570,150)" to="(650,150)"/>
     <wire from="(570,310)" to="(650,310)"/>
     <wire from="(520,310)" to="(530,310)"/>
-    <comp lib="3" loc="(420,240)" name="Comparator">
-      <a name="width" val="7"/>
-      <a name="mode" val="unsigned"/>
-    </comp>
-    <comp lib="0" loc="(490,350)" name="Splitter">
+    <comp lib="0" loc="(650,150)" name="Pin">
       <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="FLAGA"/>
+      <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(170,150)" name="Pin">
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="wejscie ASCI"/>
+    <comp lib="2" loc="(570,310)" name="Multiplexer">
+      <a name="select" val="2"/>
+      <a name="disabled" val="0"/>
     </comp>
-    <comp lib="3" loc="(420,320)" name="Comparator">
+    <comp lib="0" loc="(350,170)" name="Constant">
       <a name="width" val="7"/>
-      <a name="mode" val="unsigned"/>
+      <a name="value" val="0x64"/>
     </comp>
-    <comp lib="3" loc="(420,160)" name="Comparator">
+    <comp lib="0" loc="(510,160)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(350,410)" name="Constant">
       <a name="width" val="7"/>
-      <a name="mode" val="unsigned"/>
+      <a name="value" val="0x71"/>
+    </comp>
+    <comp lib="0" loc="(350,330)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x65"/>
+    </comp>
+    <comp lib="0" loc="(510,320)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(500,290)" name="Constant">
+      <a name="value" val="0x0"/>
     </comp>
     <comp lib="0" loc="(650,310)" name="Pin">
       <a name="facing" val="west"/>
@@ -136,57 +147,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="FLAGA 2"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(350,330)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x71"/>
-    </comp>
-    <comp lib="0" loc="(500,290)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(510,320)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(350,250)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x61"/>
-    </comp>
-    <comp lib="2" loc="(570,310)" name="Multiplexer">
-      <a name="select" val="2"/>
-      <a name="disabled" val="0"/>
-    </comp>
-    <comp lib="0" loc="(510,300)" name="Constant"/>
-    <comp lib="0" loc="(350,410)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x65"/>
-    </comp>
-    <comp lib="6" loc="(247,326)" name="Text">
-      <a name="text" val="q - rot lewo"/>
-    </comp>
-    <comp lib="0" loc="(500,130)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(350,170)" name="Constant">
-      <a name="width" val="7"/>
-      <a name="value" val="0x64"/>
-    </comp>
     <comp lib="3" loc="(420,400)" name="Comparator">
       <a name="width" val="7"/>
       <a name="mode" val="unsigned"/>
-    </comp>
-    <comp lib="0" loc="(490,190)" name="Splitter">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="6" loc="(246,394)" name="Text">
-      <a name="text" val="e - rot prawo"/>
-    </comp>
-    <comp lib="0" loc="(510,160)" name="Constant">
-      <a name="value" val="0x0"/>
-    </comp>
-    <comp lib="0" loc="(650,150)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="FLAGA"/>
-      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(170,190)" name="Pin">
       <a name="tristate" val="false"/>
@@ -197,12 +160,49 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="select" val="2"/>
       <a name="disabled" val="0"/>
     </comp>
+    <comp lib="3" loc="(420,320)" name="Comparator">
+      <a name="width" val="7"/>
+      <a name="mode" val="unsigned"/>
+    </comp>
     <comp lib="0" loc="(170,230)" name="Pin">
       <a name="tristate" val="false"/>
       <a name="label" val="RESET"/>
     </comp>
+    <comp lib="6" loc="(246,394)" name="Text">
+      <a name="text" val="e - rot prawo"/>
+    </comp>
+    <comp lib="6" loc="(247,326)" name="Text">
+      <a name="text" val="q - rot lewo"/>
+    </comp>
+    <comp lib="3" loc="(420,240)" name="Comparator">
+      <a name="width" val="7"/>
+      <a name="mode" val="unsigned"/>
+    </comp>
     <comp lib="4" loc="(290,150)" name="Register">
       <a name="width" val="7"/>
+    </comp>
+    <comp lib="0" loc="(170,150)" name="Pin">
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="wejscie ASCI"/>
+    </comp>
+    <comp lib="0" loc="(490,350)" name="Splitter">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(490,190)" name="Splitter">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(510,300)" name="Constant"/>
+    <comp lib="3" loc="(420,160)" name="Comparator">
+      <a name="width" val="7"/>
+      <a name="mode" val="unsigned"/>
+    </comp>
+    <comp lib="0" loc="(500,130)" name="Constant">
+      <a name="value" val="0x0"/>
+    </comp>
+    <comp lib="0" loc="(350,250)" name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x61"/>
     </comp>
   </circuit>
 </project>

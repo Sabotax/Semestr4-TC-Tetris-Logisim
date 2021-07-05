@@ -111,6 +111,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(370,220)" to="(450,220)"/>
     <wire from="(120,380)" to="(190,380)"/>
     <wire from="(450,220)" to="(450,280)"/>
+    <comp lib="0" loc="(120,380)" name="Clock"/>
     <comp lib="0" loc="(720,260)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -118,15 +119,21 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="NOWE A1"/>
       <a name="labelloc" val="east"/>
     </comp>
+    <comp lib="0" loc="(720,290)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="CZY RUCH BYŁ ZABLOKOWANY"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(160,220)" name="Pin">
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
+    </comp>
+    <comp lib="5" loc="(590,440)" name="Keyboard"/>
     <comp lib="8" loc="(800,470)" name="main"/>
     <comp lib="6" loc="(887,543)" name="Text">
       <a name="text" val="do rotacji na przyszlosc"/>
-    </comp>
-    <comp lib="5" loc="(590,440)" name="Keyboard"/>
-    <comp lib="4" loc="(440,160)" name="RAM">
-      <a name="addrWidth" val="7"/>
-      <a name="dataWidth" val="2"/>
-      <a name="bus" val="separate"/>
     </comp>
     <comp lib="7" loc="(440,250)" name="main"/>
     <comp lib="0" loc="(460,530)" name="Pin">
@@ -139,17 +146,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="tristate" val="false"/>
       <a name="label" val="ENABLE"/>
     </comp>
-    <comp lib="0" loc="(120,380)" name="Clock"/>
-    <comp lib="0" loc="(720,290)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="CZY RUCH BYŁ ZABLOKOWANY"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="4" loc="(440,160)" name="RAM">
+      <a name="addrWidth" val="7"/>
+      <a name="dataWidth" val="2"/>
+      <a name="bus" val="separate"/>
     </comp>
-    <comp lib="0" loc="(160,220)" name="Pin">
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
+    <comp lib="6" loc="(813,586)" name="Text">
+      <a name="text" val="JEDNAK DO E/Q zrobic osobne K!, bo osobne finishe je powinny resetowac"/>
     </comp>
   </circuit>
 </project>
