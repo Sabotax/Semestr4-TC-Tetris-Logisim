@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
 This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-<lib desc="#Wiring" name="0"/>
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="5"/>
+      <a name="incoming" val="5"/>
+      <a name="appear" val="center"/>
+    </tool>
+    <tool name="Pin">
+      <a name="facing" val="south"/>
+    </tool>
+    <tool name="Pull Resistor">
+      <a name="facing" val="west"/>
+    </tool>
+    <tool name="Constant">
+      <a name="width" val="7"/>
+      <a name="value" val="0x7f"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
@@ -97,17 +114,51 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(170,190)" to="(240,190)"/>
     <wire from="(410,170)" to="(410,230)"/>
     <wire from="(510,30)" to="(510,90)"/>
+    <comp lib="6" loc="(85,244)" name="Text">
+      <a name="text" val="czyli włącznie od 1100000"/>
+    </comp>
+    <comp lib="7" loc="(330,240)" name="main"/>
+    <comp lib="0" loc="(490,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="5" loc="(260,280)" name="Button"/>
+    <comp lib="6" loc="(129,163)" name="Text">
+      <a name="text" val="1011111 bin"/>
+    </comp>
+    <comp lib="0" loc="(490,300)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(260,300)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="4" loc="(440,90)" name="RAM">
+      <a name="addrWidth" val="7"/>
+      <a name="dataWidth" val="2"/>
+      <a name="bus" val="separate"/>
+    </comp>
     <comp lib="6" loc="(570,205)" name="Text">
       <a name="text" val="ostatni wiersz przy 78"/>
+    </comp>
+    <comp lib="6" loc="(124,117)" name="Text">
+      <a name="text" val="95 dec"/>
+    </comp>
+    <comp lib="6" loc="(97,267)" name="Text">
+      <a name="text" val="wchodzi w tryb p4"/>
+    </comp>
+    <comp lib="6" loc="(124,140)" name="Text">
+      <a name="text" val="5F hex"/>
+    </comp>
+    <comp lib="6" loc="(195,89)" name="Text">
+      <a name="text" val="(nie włącznie)"/>
     </comp>
     <comp lib="4" loc="(680,90)" name="RAM">
       <a name="addrWidth" val="7"/>
       <a name="dataWidth" val="2"/>
       <a name="bus" val="separate"/>
-    </comp>
-    <comp lib="7" loc="(330,240)" name="main"/>
-    <comp lib="6" loc="(124,140)" name="Text">
-      <a name="text" val="5F hex"/>
     </comp>
     <comp lib="6" loc="(135,72)" name="Text">
       <a name="text" val="na prezentacje: przy podlodze to od"/>
@@ -115,40 +166,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <comp lib="0" loc="(170,190)" name="Pin">
       <a name="width" val="7"/>
       <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(490,280)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(490,300)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="6" loc="(85,244)" name="Text">
-      <a name="text" val="czyli włącznie od 1100000"/>
-    </comp>
-    <comp lib="4" loc="(440,90)" name="RAM">
-      <a name="addrWidth" val="7"/>
-      <a name="dataWidth" val="2"/>
-      <a name="bus" val="separate"/>
-    </comp>
-    <comp lib="6" loc="(124,117)" name="Text">
-      <a name="text" val="95 dec"/>
-    </comp>
-    <comp lib="6" loc="(195,89)" name="Text">
-      <a name="text" val="(nie włącznie)"/>
-    </comp>
-    <comp lib="6" loc="(129,163)" name="Text">
-      <a name="text" val="1011111 bin"/>
-    </comp>
-    <comp lib="0" loc="(260,280)" name="Clock"/>
-    <comp lib="0" loc="(260,300)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="6" loc="(97,267)" name="Text">
-      <a name="text" val="wchodzi w tryb p4"/>
     </comp>
   </circuit>
 </project>
