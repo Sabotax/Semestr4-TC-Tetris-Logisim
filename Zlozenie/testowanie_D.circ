@@ -227,6 +227,12 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(480,550)" to="(480,610)"/>
     <wire from="(480,460)" to="(550,460)"/>
     <wire from="(250,420)" to="(250,610)"/>
+    <comp lib="2" loc="(510,210)" name="Multiplexer">
+      <a name="facing" val="west"/>
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="10" loc="(670,480)" name="Keyboard Manager"/>
+    <comp lib="5" loc="(590,440)" name="Keyboard"/>
     <comp lib="1" loc="(120,430)" name="NOT Gate">
       <a name="facing" val="north"/>
     </comp>
@@ -237,47 +243,45 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="2" loc="(710,290)" name="Multiplexer"/>
-    <comp lib="8" loc="(800,470)" name="main"/>
-    <comp lib="2" loc="(260,160)" name="Multiplexer">
+    <comp lib="0" loc="(160,220)" name="Pin">
       <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A1"/>
     </comp>
-    <comp lib="2" loc="(510,50)" name="Multiplexer">
-      <a name="facing" val="west"/>
+    <comp lib="4" loc="(440,160)" name="RAM">
+      <a name="addrWidth" val="7"/>
+      <a name="dataWidth" val="2"/>
+      <a name="bus" val="separate"/>
     </comp>
+    <comp lib="2" loc="(210,620)" name="Demultiplexer"/>
+    <comp lib="8" loc="(800,470)" name="main"/>
+    <comp lib="6" loc="(600,658)" name="Text">
+      <a name="text" val="ten finisz wystepuje ale od razu sie gasi, bo resetuje tez koder i zmienia flage akcji"/>
+    </comp>
+    <comp lib="9" loc="(440,400)" name="main"/>
+    <comp lib="2" loc="(190,290)" name="Demultiplexer"/>
     <comp lib="0" loc="(490,610)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="FINISH ROT"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="6" loc="(600,658)" name="Text">
-      <a name="text" val="ten finisz wystepuje ale od razu sie gasi, bo resetuje tez koder i zmienia flage akcji"/>
-    </comp>
-    <comp lib="0" loc="(160,220)" name="Pin">
+    <comp lib="2" loc="(260,160)" name="Multiplexer">
       <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A1"/>
     </comp>
-    <comp lib="2" loc="(510,210)" name="Multiplexer">
+    <comp lib="2" loc="(510,50)" name="Multiplexer">
       <a name="facing" val="west"/>
-      <a name="width" val="2"/>
     </comp>
-    <comp lib="10" loc="(670,480)" name="Keyboard Manager"/>
-    <comp lib="9" loc="(440,400)" name="main"/>
-    <comp lib="2" loc="(210,620)" name="Demultiplexer"/>
     <comp lib="1" loc="(630,510)" name="OR Gate">
       <a name="size" val="30"/>
       <a name="inputs" val="2"/>
     </comp>
-    <comp lib="0" loc="(120,380)" name="Clock"/>
-    <comp lib="5" loc="(590,440)" name="Keyboard"/>
     <comp lib="0" loc="(740,320)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="FINISH PRZESUW"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="2" loc="(190,290)" name="Demultiplexer"/>
     <comp lib="7" loc="(440,250)" name="main"/>
     <comp lib="0" loc="(720,260)" name="Pin">
       <a name="facing" val="west"/>
@@ -286,10 +290,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="NOWE A1"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(440,160)" name="RAM">
-      <a name="addrWidth" val="7"/>
-      <a name="dataWidth" val="2"/>
-      <a name="bus" val="separate"/>
-    </comp>
+    <comp lib="0" loc="(120,380)" name="Clock"/>
   </circuit>
 </project>
