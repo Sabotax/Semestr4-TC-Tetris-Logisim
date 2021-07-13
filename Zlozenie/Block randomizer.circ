@@ -8,6 +8,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="incoming" val="5"/>
       <a name="appear" val="center"/>
     </tool>
+    <tool name="Pin">
+      <a name="facing" val="south"/>
+    </tool>
     <tool name="Pull Resistor">
       <a name="facing" val="north"/>
     </tool>
@@ -25,8 +28,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="inputs" val="2"/>
     </tool>
     <tool name="Controlled Buffer">
-      <a name="width" val="2"/>
-      <a name="control" val="left"/>
+      <a name="width" val="5"/>
     </tool>
   </lib>
   <lib desc="#Plexers" name="2">
@@ -259,14 +261,83 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(940,170)" to="(940,220)"/>
     <wire from="(370,70)" to="(370,190)"/>
     <wire from="(620,130)" to="(630,130)"/>
-    <comp lib="0" loc="(440,200)" name="Constant">
+    <comp lib="0" loc="(440,130)" name="Constant">
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="1" loc="(780,50)" name="Controlled Buffer">
+      <a name="width" val="7"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(220,220)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(440,270)" name="Constant">
+      <a name="width" val="2"/>
+      <a name="value" val="0x3"/>
+    </comp>
+    <comp lib="0" loc="(440,60)" name="Constant">
       <a name="width" val="2"/>
       <a name="value" val="0x2"/>
     </comp>
-    <comp lib="4" loc="(220,150)" name="Counter">
-      <a name="width" val="4"/>
-      <a name="max" val="0xf"/>
-      <a name="trigger" val="falling"/>
+    <comp lib="11" loc="(340,190)" name="RAND"/>
+    <comp lib="0" loc="(950,420)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="GAME_OVER"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="1" loc="(800,290)" name="Controlled Buffer">
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="1" loc="(770,130)" name="Controlled Buffer">
+      <a name="width" val="7"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="6" loc="(155,645)" name="Text">
+      <a name="text" val="OUT_B - is the system working"/>
+    </comp>
+    <comp lib="6" loc="(159,614)" name="Text">
+      <a name="text" val="OUT_A - code for coordinates of current block"/>
+    </comp>
+    <comp lib="1" loc="(800,220)" name="Controlled Buffer">
+      <a name="width" val="2"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="9" loc="(700,200)" name="main"/>
+    <comp lib="12" loc="(490,200)" name="main"/>
+    <comp lib="8" loc="(690,130)" name="2x2 Block"/>
+    <comp lib="12" loc="(490,270)" name="main"/>
+    <comp lib="1" loc="(780,200)" name="Controlled Buffer">
+      <a name="width" val="7"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(950,20)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="OUT_B"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(120,240)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="START"/>
+    </comp>
+    <comp lib="0" loc="(230,400)" name="Pin">
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="CURRENT_GAME_ADRESS"/>
+    </comp>
+    <comp lib="1" loc="(790,150)" name="Controlled Buffer">
+      <a name="width" val="2"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(940,130)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="7"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="OUT_A"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(1090,220)" name="Pin">
       <a name="facing" val="west"/>
@@ -276,130 +347,61 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="OUT_D"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="6" loc="(159,614)" name="Text">
-      <a name="text" val="OUT_A - code for coordinates of current block"/>
+    <comp lib="1" loc="(1010,280)" name="Controlled Buffer">
+      <a name="width" val="2"/>
+      <a name="control" val="left"/>
     </comp>
-    <comp lib="7" loc="(700,50)" name="main"/>
+    <comp lib="12" loc="(490,130)" name="main"/>
+    <comp lib="12" loc="(980,220)" name="main"/>
+    <comp lib="0" loc="(200,440)" name="Pin">
+      <a name="width" val="2"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="CURRENT GAME STATE"/>
+    </comp>
+    <comp lib="0" loc="(1030,180)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
     <comp lib="1" loc="(1000,190)" name="NOT Gate">
       <a name="facing" val="north"/>
       <a name="size" val="20"/>
     </comp>
-    <comp lib="12" loc="(490,270)" name="main"/>
     <comp lib="0" loc="(1030,290)" name="Pull Resistor">
       <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(950,20)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="OUT_B"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="12" loc="(490,200)" name="main"/>
-    <comp lib="6" loc="(155,645)" name="Text">
-      <a name="text" val="OUT_B - is the system working"/>
-    </comp>
-    <comp lib="0" loc="(120,190)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="CLK"/>
-    </comp>
-    <comp lib="1" loc="(800,220)" name="Controlled Buffer">
-      <a name="width" val="2"/>
-      <a name="control" val="left"/>
     </comp>
     <comp lib="1" loc="(800,70)" name="Controlled Buffer">
       <a name="width" val="2"/>
       <a name="control" val="left"/>
     </comp>
-    <comp lib="8" loc="(690,130)" name="2x2 Block"/>
-    <comp lib="0" loc="(440,60)" name="Constant">
+    <comp lib="1" loc="(1010,170)" name="Controlled Buffer">
+      <a name="width" val="2"/>
+    </comp>
+    <comp lib="7" loc="(700,50)" name="main"/>
+    <comp lib="10" loc="(700,270)" name="main"/>
+    <comp lib="1" loc="(160,190)" name="Controlled Buffer"/>
+    <comp lib="12" loc="(490,60)" name="main"/>
+    <comp lib="0" loc="(440,200)" name="Constant">
       <a name="width" val="2"/>
       <a name="value" val="0x0"/>
     </comp>
     <comp lib="6" loc="(152,683)" name="Text">
       <a name="text" val="OUT_D - is current block solid/air"/>
     </comp>
-    <comp lib="0" loc="(950,420)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="GAME_OVER"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(1010,280)" name="Controlled Buffer">
-      <a name="width" val="2"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(440,130)" name="Constant">
-      <a name="width" val="2"/>
-    </comp>
-    <comp lib="0" loc="(230,400)" name="Pin">
-      <a name="width" val="7"/>
+    <comp lib="0" loc="(120,190)" name="Pin">
       <a name="tristate" val="false"/>
-      <a name="label" val="CURRENT_GAME_ADRESS"/>
+      <a name="label" val="CLK"/>
     </comp>
-    <comp lib="15" loc="(640,420)" name="GAME_OVER"/>
-    <comp lib="0" loc="(940,130)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="7"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="OUT_A"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="1" loc="(780,270)" name="Controlled Buffer">
-      <a name="width" val="7"/>
-    </comp>
-    <comp lib="0" loc="(220,220)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="10" loc="(700,270)" name="main"/>
-    <comp lib="12" loc="(490,130)" name="main"/>
-    <comp lib="1" loc="(790,150)" name="Controlled Buffer">
-      <a name="width" val="2"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="1" loc="(160,190)" name="Controlled Buffer"/>
-    <comp lib="1" loc="(770,130)" name="Controlled Buffer">
-      <a name="width" val="7"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(440,270)" name="Constant">
-      <a name="width" val="2"/>
-      <a name="value" val="0x3"/>
-    </comp>
-    <comp lib="12" loc="(980,220)" name="main"/>
-    <comp lib="0" loc="(1030,180)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="9" loc="(700,200)" name="main"/>
-    <comp lib="12" loc="(490,60)" name="main"/>
-    <comp lib="11" loc="(340,190)" name="RAND"/>
-    <comp lib="1" loc="(800,290)" name="Controlled Buffer">
-      <a name="width" val="2"/>
-    </comp>
-    <comp lib="1" loc="(780,200)" name="Controlled Buffer">
-      <a name="width" val="7"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="1" loc="(1010,170)" name="Controlled Buffer">
-      <a name="width" val="2"/>
-    </comp>
-    <comp lib="0" loc="(200,440)" name="Pin">
-      <a name="width" val="2"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="CURRENT GAME STATE"/>
-    </comp>
-    <comp lib="0" loc="(120,240)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="START"/>
-    </comp>
-    <comp lib="1" loc="(780,50)" name="Controlled Buffer">
-      <a name="width" val="7"/>
-      <a name="control" val="left"/>
+    <comp lib="4" loc="(220,150)" name="Counter">
+      <a name="width" val="4"/>
+      <a name="max" val="0xf"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="0" loc="(940,230)" name="Constant">
       <a name="width" val="2"/>
       <a name="value" val="0x0"/>
     </comp>
+    <comp lib="1" loc="(780,270)" name="Controlled Buffer">
+      <a name="width" val="7"/>
+    </comp>
+    <comp lib="15" loc="(640,420)" name="GAME_OVER"/>
   </circuit>
 </project>
