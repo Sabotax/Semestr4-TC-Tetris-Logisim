@@ -95,27 +95,36 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(510,290)" to="(720,290)"/>
     <wire from="(420,310)" to="(440,310)"/>
     <wire from="(720,270)" to="(720,290)"/>
-    <comp lib="0" loc="(320,340)" name="Pin">
-      <a name="facing" val="north"/>
-      <a name="tristate" val="false"/>
+    <comp lib="2" loc="(350,140)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="8"/>
+      <a name="matrixrows" val="16"/>
+    </comp>
+    <comp lib="3" loc="(69,37)" name="Text">
+      <a name="text" val="1. Poziom trudności"/>
     </comp>
     <comp lib="2" loc="(470,340)" name="Button">
       <a name="facing" val="north"/>
+    </comp>
+    <comp lib="2" loc="(590,260)" name="Keyboard"/>
+    <comp lib="3" loc="(36,67)" name="Text">
+      <a name="text" val="3. Start"/>
+    </comp>
+    <comp lib="0" loc="(320,340)" name="Pin">
+      <a name="facing" val="north"/>
+      <a name="tristate" val="false"/>
     </comp>
     <comp lib="0" loc="(400,340)" name="Pin">
       <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
     </comp>
     <comp lib="4" loc="(460,310)" name="Tetris"/>
-    <comp lib="2" loc="(350,140)" name="DotMatrix">
-      <a name="inputtype" val="row"/>
-      <a name="matrixcols" val="8"/>
-      <a name="matrixrows" val="16"/>
+    <comp lib="3" loc="(53,52)" name="Text">
+      <a name="text" val="2. Taktowanie"/>
     </comp>
     <comp lib="0" loc="(360,340)" name="Pin">
       <a name="facing" val="north"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="2" loc="(590,260)" name="Keyboard"/>
   </circuit>
 </project>
